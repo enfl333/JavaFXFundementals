@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="flores.javafx.recap.sessions.Screen1Controller">
+   <children>
+      <HBox layoutX="10.0" layoutY="10.0" prefHeight="99.0" prefWidth="377.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="72.0" prefWidth="106.0" text="Name" />
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Separator orientation="VERTICAL" prefHeight="23.0" prefWidth="4.0" visible="false" />
+                  <TextField fx:id="enterNameTxTField" alignment="CENTER" prefWidth="167.0" />
+               </children>
+            </VBox>
+            <VBox layoutX="116.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Separator orientation="VERTICAL" prefHeight="46.0" prefWidth="10.0" visible="false" />
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Separator prefHeight="4.0" prefWidth="17.0" visible="false" />
+                        <Button fx:id="enterNameButton" alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#processName" text="Enter" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Label layoutX="114.0" layoutY="127.0" prefHeight="114.0" prefWidth="181.0" text="Screen1 in tha house!" />
+   </children>
+</AnchorPane>

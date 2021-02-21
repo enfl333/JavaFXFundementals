@@ -28,6 +28,16 @@ public class Screen1Controller implements Initializable {
         nameList.getItems().add(name);
     }
 
+    public void deleteName(){
+        int deleteIndex =  nameList.getSelectionModel().getSelectedIndex();
+        Logger.getLogger(this.getClass()).debug("Selected Index to delete: "+deleteIndex);
+        if(deleteIndex == -1){
+            //Add Alert explaining need to select A name first
+        }else{
+
+        }
+    }
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

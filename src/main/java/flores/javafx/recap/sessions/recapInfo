@@ -1,0 +1,24 @@
+General
+-------
+-In a BorderPane change the center to different scene, each scene is created with a
+fxml file and has it's own controller
+- Invoke Initialize interface to load data in a controller from start
+
+Default
+--------
+Read this information from a file and display it in a Text area.
+
+Screen 1
+--------
+-Simple event management push button, connect method, get text add it to a list
+-Add code to delete from the list.
+
+Screen 2
+--------
+- A progressbar and a button to simulate a task
+- binding and updating
+
+Screen3
+--------
+- A Service/Task to simulate a background task running and that does not cause the
+program to freeze.

@@ -31,17 +31,21 @@
                         <HBox prefHeight="100.0" prefWidth="200.0">
                            <children>
                               <Separator prefHeight="4.0" prefWidth="17.0" visible="false" />
-                              <Button fx:id="enterNameButton" alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#processName" text="Enter" />
+                              <Button fx:id="enterNameButton" alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#processName" text="Add" />
                            </children>
                         </HBox>
                      </children>
                   </VBox>
                </children>
             </HBox>
-            <SplitPane dividerPositions="0.17725752508361203">
+            <SplitPane dividerPositions="0.6789297658862876">
                <items>
-                  <Pane prefHeight="192.0" prefWidth="173.0" />
-                  <ListView fx:id="nameList" prefHeight="200.0" prefWidth="200.0" />
+                  <ListView fx:id="nameList" prefHeight="189.0" prefWidth="271.0" />
+                  <Pane prefHeight="192.0" prefWidth="173.0">
+                     <children>
+                        <Button layoutX="7.0" layoutY="8.0" mnemonicParsing="false" onAction="#deleteName" text="Delete" />
+                        <Label layoutX="7.0" layoutY="47.0" text="Delte a name from the list." />
+                     </children></Pane>
                </items>
             </SplitPane>
             <Label prefHeight="107.0" prefWidth="284.0" text="Screen1 in tha house!">

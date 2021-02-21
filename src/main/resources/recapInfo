@@ -12,6 +12,7 @@ Screen 1
 --------
 -Simple event management push button, connect method, get text add it to a list
 -Add code to delete from the list.
+- Add Alert confirmation and validation alerts, local english language
 
 Screen 2
 --------

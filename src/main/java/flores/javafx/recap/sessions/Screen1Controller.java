@@ -4,12 +4,11 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import org.apache.log4j.Logger;
 
 import java.net.URL;
+import java.util.Locale;
 import java.util.ResourceBundle;
 
 public class Screen1Controller implements Initializable {
@@ -22,19 +21,32 @@ public class Screen1Controller implements Initializable {
 
     public void processName(){
         String name = enterNameTxTField.getText().trim();
-        System.out.println("Getting text from the field for a Name!!!:"+name);
-        Logger.getLogger(this.getClass()).debug(" ProcesName: "+name);
-        enterNameTxTField.clear();
-        nameList.getItems().add(name);
+        if(name.trim().length()>0){
+            System.out.println("Getting text from the field for a Name!!!:"+name);
+            Logger.getLogger(this.getClass()).debug(" ProcesName: "+name);
+            enterNameTxTField.clear();
+            nameList.getItems().add(name);
+        }else {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION, "Can't enter an empty name");
+            alert.show();
+        }
+
     }
 
     public void deleteName(){
         int deleteIndex =  nameList.getSelectionModel().getSelectedIndex();
         Logger.getLogger(this.getClass()).debug("Selected Index to delete: "+deleteIndex);
         if(deleteIndex == -1){
-            //Add Alert explaining need to select A name first
+            Alert alert = new Alert(Alert.AlertType.INFORMATION, "Please select an item from the list.");
+            alert.show();
         }else{
-
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Are you sure you want to format your system?");
+            alert.showAndWait().ifPresent(response -> {
+                if (response == ButtonType.OK) {
+                    nameList.getItems().remove(deleteIndex);
+                    nameList.refresh();
+                }
+            });
         }
     }
 
@@ -42,6 +54,7 @@ public class Screen1Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
        ObservableList<String> names = FXCollections.observableArrayList("Default Name");
+        Locale.setDefault(Locale.ENGLISH);
         nameList.setItems(names);
     }
 }

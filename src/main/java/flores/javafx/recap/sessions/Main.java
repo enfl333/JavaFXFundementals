@@ -6,6 +6,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import org.apache.log4j.Logger;
+import org.apache.log4j.BasicConfigurator;
 /**
  * Adding comments.
  * @Author enfl
@@ -21,7 +23,12 @@ public class Main extends Application {
     }
 
 
+
     public static void main(String[] args) {
+        BasicConfigurator.configure();
+        Logger log = Logger.getLogger(Main.class);
+        log.info("This is Logger Info");
         launch(args);
+
     }
 }

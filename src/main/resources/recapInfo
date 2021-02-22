@@ -23,3 +23,7 @@ Screen3
 --------
 - A Service/Task to simulate a background task running and that does not cause the
 program to freeze.
+
+TODO:
+-----
+-fontawesomefx library

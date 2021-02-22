@@ -16,30 +16,35 @@ public class MainController implements Initializable {
     @FXML
     private BorderPane mainPane;
 
-
-
     public void changeToScreen1() throws IOException {
         System.out.println("changeToScreen1");
-        Parent root = FXMLLoader.load(getClass().getResource("screen1.fxml"));
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/screen1.fxml"));
+        Parent root = loader.load();
         mainPane.setCenter(root);
     }
 
     public void changeToScreen2() throws IOException {
         System.out.println("changeToScreen2");
-
-        Parent root = FXMLLoader.load(getClass().getResource("screen2.fxml"));
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/screen2.fxml"));
+        Parent root = loader.load();
         mainPane.setCenter(root);
     }
 
     public void changeToScreen3() throws IOException {
         System.out.println("changeToScreen3");
-        Parent root = FXMLLoader.load(getClass().getResource("screen3.fxml"));
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/screen3.fxml"));
+        Parent root = loader.load();
         mainPane.setCenter(root);
     }
 
     public void setDefault()throws IOException {
         System.out.println("Default");
-        Parent root = FXMLLoader.load(getClass().getResource("default.fxml"));
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/default.fxml"));
+        Parent root = loader.load();
         mainPane.setCenter(root);
     }
 

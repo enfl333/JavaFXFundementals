@@ -3,6 +3,7 @@ General
 -In a BorderPane change the center to different scene, each scene is created with a
 fxml file and has it's own controller
 - Invoke Initialize interface to load data in a controller from start
+- Icons in Buttons
 
 Default
 --------
@@ -26,4 +27,5 @@ program to freeze.
 
 TODO:
 -----
--fontawesomefx library
+-fontawesomefx library, ikonli Font icons (Requires working Maven Project)
+

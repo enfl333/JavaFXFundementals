@@ -4,9 +4,14 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
+
 import java.io.IOException;
 import java.net.URL;
+import java.util.Locale;
 import java.util.ResourceBundle;
 
 
@@ -49,9 +54,25 @@ public class MainController implements Initializable {
     }
 
 
+    public void menuActionHelp(){
+        Alert aboutDialog = new Alert(Alert.AlertType.INFORMATION, "Re-cap JavaFx lessons");
+        aboutDialog.show();
+    }
+
+    public void menuClose(){
+        Alert closeDialog = new Alert(Alert.AlertType.CONFIRMATION, "Are you sure you want to close?");
+        closeDialog.showAndWait().ifPresent(response -> {
+            if (response == ButtonType.OK) {
+                Stage stage = (Stage) mainPane.getScene().getWindow();
+                stage.close();
+            }
+        });
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try {
+            Locale.setDefault(Locale.ENGLISH);
             setDefault();
         } catch (IOException e) {
             e.printStackTrace();

@@ -1,57 +1,73 @@
 package flores.javafx.recap.model;
 
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
+
 public class Worker {
-    private String id;
-    private String name;
-    private String email;
-    private String department;
-    private String salary;
+    private SimpleIntegerProperty id;
+    private SimpleStringProperty name;
+    private SimpleStringProperty email;
+    private SimpleStringProperty department;
+    private SimpleIntegerProperty salary;
 
 
-    public Worker(){
+    public Worker(Integer id, String name, String email, String department, Integer salary){
+     this.id = new SimpleIntegerProperty(id);
+     this.name = new SimpleStringProperty(name);
+     this.email = new SimpleStringProperty(email);
+     this.department = new SimpleStringProperty(department);
+     this.salary = new SimpleIntegerProperty(salary);
 
     }
 
-    public String getId() {
-        return id;
+    public Integer getId() {
+        return id.get();
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setId(Integer id) {
+        this.id.set(id);
     }
 
     public String getName() {
-        return name;
+        return name.get();
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.name.set(name);
     }
 
     public String getEmail() {
-        return email;
+        return email.get();
     }
 
     public void setEmail(String email) {
-        this.email = email;
+        this.email.set(email);
     }
 
     public String getDepartment() {
-        return department;
+        return department.get();
     }
 
     public void setDepartment(String department) {
-        this.department = department;
+        this.department.set(department);
     }
 
-    public String getSalary() {
-        return salary;
+    public Integer getSalary() {
+        return salary.get();
     }
 
-    public void setSalary(String salary) {
-        this.salary = salary;
+    public void setSalary(Integer salary) {
+        this.salary.set(salary);
     }
 
-
-
+    @Override
+    public String toString() {
+        return "Worker{" +
+                "id=" + getId() +
+                ", name=" + getName() +
+                ", email=" + getEmail() +
+                ", department=" + getDepartment() +
+                ", salary=" + getSalary() +
+                '}';
+    }
 }

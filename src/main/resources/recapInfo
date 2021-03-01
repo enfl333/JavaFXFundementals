@@ -1,9 +1,11 @@
 General
 -------
--In a BorderPane change the center to different scene, each scene is created with a
+-BorderPane with different scenes (Center), each scene is created with a
 fxml file and has it's own controller
 - Invoke Initialize interface to load data in a controller from start
 - Icons in Buttons
+- A simple MenuBar
+- FXML and images fetched from resources
 
 Default
 --------
@@ -19,13 +21,13 @@ Screen 2
 --------
 - A progressbar and a button to simulate a task
 - binding and updating
-
-Screen3
---------
 - A Service/Task to simulate a background task running and that does not cause the
 program to freeze.
 
-TODO:
------
--fontawesomefx library, ikonli Font icons (Requires working Maven Project)
+Screen3
+--------
+ A TableView with a search TextField that has a binding to the data in the table displaying
+ the filtered values
+
+
 

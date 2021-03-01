@@ -45,6 +45,15 @@ public class MainController implements Initializable {
         mainPane.setCenter(root);
     }
 
+
+    public void changeToScreen4() throws IOException {
+        System.out.println("changeToScreen4");
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/screen4.fxml"));
+        Parent root = loader.load();
+        mainPane.setCenter(root);
+    }
+
     public void setDefault()throws IOException {
         System.out.println("Default");
         FXMLLoader loader = new FXMLLoader();

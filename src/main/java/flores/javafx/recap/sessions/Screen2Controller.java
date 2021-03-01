@@ -35,6 +35,11 @@ public class Screen2Controller {
                                 e.printStackTrace();
                             }
                         }
+                        System.out.println("Done progress bar");
+                        updateProgress(0,0);
+
+                       
+
                         return null;
                     }
                 };

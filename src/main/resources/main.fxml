@@ -41,6 +41,15 @@
                      </image>
                   </ImageView>
                </graphic></Button>
+            <Button mnemonicParsing="false" onAction="#changeToScreen4" prefHeight="42.0" prefWidth="120.0" text="Lesson 4">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/Pencil.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
             <Button mnemonicParsing="false" onAction="#setDefault" prefHeight="42.0" prefWidth="120.0" text="Default">
                <graphic>
                   <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
